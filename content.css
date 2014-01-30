@@ -1,0 +1,12 @@
+body {
+	line-height: 1.7;
+	text-align: justify;
+}
+
+textarea, input:not([type]), input[type="text"], input[type="search"] {
+	font-family: monospace, monospace !important;
+}
+
+textarea {
+	line-height: 1.7;
+}
