@@ -1,0 +1,8 @@
+#playerContainerWrapper, .notify_update_flash_player {
+	display: none !important;
+}
+
+video {
+	display: block;
+	margin: 1em auto;
+}

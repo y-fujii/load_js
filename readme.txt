@@ -1,1 +1,1 @@
-Firefox Add-ons for my private use.
+A WebExtension for my private use.
