@@ -4,10 +4,6 @@
 function Hooker() {
 	this.insertMode = false;
 
-	switch( window.location.hostname ) {
-		case "c9.io":
-			return;
-	}
 	window.addEventListener( "keydown", this.onKeyDown.bind( this ), true );
 }
 

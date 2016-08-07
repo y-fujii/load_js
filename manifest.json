@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name":             "webext",
+	"version":          "0.7", 
+
+	"content_scripts": [
+		{
+			"matches":    [ "*://*/*", "file://*/*" ],
+			"all_frames": true,
+			"run_at":     "document_start",
+			"css":        [ "content.css" ],
+			"js":         [ "content.js" ]
+		},
+		{
+			"matches":    [ "*://www.nicovideo.jp/watch/*" ],
+			"run_at":     "document_end",
+			"css":        [ "niconico.css" ],
+			"js":         [ "niconico.js" ]
+		}
+	]
+}
