@@ -8,6 +8,10 @@ function Hooker() {
 }
 
 Hooker.prototype.onKeyDown = function( ev ) {
+	if( ev.defaultPrevented ) {
+		return;
+	}
+
 	if( ev.ctrlKey || ev.altKey ) {
 		return;
 	}
@@ -15,65 +19,65 @@ Hooker.prototype.onKeyDown = function( ev ) {
 	if( document.activeElement instanceof HTMLInputElement ||
 	    document.activeElement instanceof HTMLTextAreaElement )
 	{
-		if( ev.keyCode === KeyEvent.DOM_VK_ESCAPE && !ev.shiftKey ) {
+		if( ev.code === "Escape" && !ev.shiftKey ) {
 			document.activeElement.blur();
 		}
 		return;
 	}
 
 	if( this.insertMode ) {
-		if( ev.keyCode === KeyEvent.DOM_VK_ESCAPE && ev.shiftKey ) {
+		if( ev.code === "Escape" && ev.shiftKey ) {
 			this.insertMode = false;
 		}
 		return;
 	}
 
-	if( ev.keyCode < KeyEvent.DOM_VK_A || KeyEvent.DOM_VK_Z < ev.keyCode ) {
-		return;
-	}
-
 	if( ev.shiftKey ) {
-		switch( ev.keyCode ) {
-			case KeyEvent.DOM_VK_K:
+		switch( ev.code ) {
+			case "KeyK":
 				window.scrollBy( 0, -1 );
 				break;
-			case KeyEvent.DOM_VK_J:
+			case "KeyJ":
 				window.scrollBy( 0, +1 );
 				break;
-			case KeyEvent.DOM_VK_H:
+			case "KeyH":
 				window.scrollBy( -1, 0 );
 				break;
-			case KeyEvent.DOM_VK_L:
+			case "KeyL":
 				window.scrollBy( +1, 0 );
 				break;
-			case KeyEvent.DOM_VK_G:
+			case "KeyG":
 				window.scrollTo( window.pageXOffset, document.body.scrollHeight );
 				break;
+			default:
+				return;
 		}
 	}
 	else {
-		switch( ev.keyCode ) {
-			case KeyEvent.DOM_VK_K:
+		switch( ev.code ) {
+			case "KeyK":
 				window.scrollBy( 0, window.innerHeight / -2 );
 				break;
-			case KeyEvent.DOM_VK_J:
+			case "KeyJ":
 				window.scrollBy( 0, window.innerHeight / +2 );
 				break;
-			case KeyEvent.DOM_VK_H:
+			case "KeyH":
 				history.go( -1 );
 				break;
-			case KeyEvent.DOM_VK_L:
+			case "KeyL":
 				history.go( +1 );
 				break;
-			case KeyEvent.DOM_VK_G:
+			case "KeyG":
 				window.scrollTo( window.pageXOffset, 0 );
 				break;
-			case KeyEvent.DOM_VK_R:
+			case "KeyR":
 				window.location.reload();
 				break;
-			case KeyEvent.DOM_VK_I:
+			case "KeyI":
 				this.insertMode = true;
 				break;
+			default:
+				return;
 		}
 	}
 
