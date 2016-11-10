@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name":             "webext",
-	"version":          "0.7", 
+	"version":          "1.0", 
 
 	"content_scripts": [
 		{

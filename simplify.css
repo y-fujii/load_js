@@ -8,7 +8,7 @@
 }
 
 html {
-	font: 16px/1.5 serif !important;
+	font: 100%/1.5 sans-serif !important;
 }
 
 html:lang(ja), *:lang(ja) {
@@ -21,7 +21,7 @@ sup, sub {
 }
 
 pre, code {
-	font-family: monospace !important;
+	font-family: monospace, monospace !important;
 }
 
 iframe, object, img {
