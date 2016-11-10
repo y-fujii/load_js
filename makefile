@@ -1,4 +1,4 @@
-SRCS = manifest.json content.css content.js niconico.css niconico.js
+SRCS = manifest.json content.css content.js background.js simplify.css niconico.css niconico.js
 DSTS = webext.zip
 
 $(DSTS): $(SRCS)
