@@ -17,5 +17,18 @@
 			"css":        [ "niconico.css" ],
 			"js":         [ "niconico.js" ]
 		}
+	],
+
+	"background": {
+		"scripts": [ "background.js" ]
+	},
+
+	"permissions": [
+		"contextMenus",
+		"history"
+	],
+
+	"web_accessible_resources": [
+		"simplify.css"
 	]
 }
