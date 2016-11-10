@@ -1,45 +1,30 @@
 html {
 	line-height: 1.50;
 	text-align: justify;
-	-moz-hyphens: auto;
+	   -moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	        hyphens: auto;
 }
 
 html:lang(ja) {
 	line-height: 1.75;
 }
 
-textarea, input:not([type]), input[type="text"], input[type="search"] {
-	font-family: monospace, monospace;
+sub, sup {
+	line-height: 1.00;
 }
 
 textarea {
 	line-height: 1.50;
 }
 
+textarea, input:not([type]), input[type="text"], input[type="search"] {
+	font-family: monospace, monospace;
+}
+
 @-moz-document domain(mail.google.com) {
 	div.editable {
 		font-family: monospace, monospace;
 		text-align: left;
-	}
-}
-
-@-moz-document domain(www.aozora.gr.jp) {
-	* {
-		font: inherit !important;
-	}
-
-	html {
-		font: 18px/2.0 IPAexMincho !important;
-		text-align: justify !important;
-		writing-mode: vertical-rl !important;
-	}
-
-	body {
-		margin: auto 0 !important;
-		max-height: 32em !important;
-	}
-
-	rt {
-		font-size: 50% !important;
 	}
 }
