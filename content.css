@@ -1,0 +1,30 @@
+html {
+	line-height: 1.50;
+	text-align: justify;
+	   -moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	        hyphens: auto;
+}
+
+html:lang(ja) {
+	line-height: 1.75;
+}
+
+sub, sup {
+	line-height: 1.00;
+}
+
+textarea {
+	line-height: 1.50;
+}
+
+textarea, input:not([type]), input[type="text"], input[type="search"] {
+	font-family: monospace, monospace;
+}
+
+@-moz-document domain(mail.google.com) {
+	div.editable {
+		font-family: monospace, monospace;
+		text-align: left;
+	}
+}
