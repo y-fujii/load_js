@@ -5,10 +5,12 @@
 	text-shadow: none !important;
 	border-radius: 0 !important;
 	border-width: 1px !important;
+	text-decoration: none !important;
 }
 
 html {
-	font: 100%/1.5 sans-serif !important;
+	font: 87.5%/1.5 sans-serif !important;
+	filter: grayscale( 100% );
 }
 
 html:lang(ja), *:lang(ja) {
@@ -33,4 +35,8 @@ p, li, dd {
 	   -moz-hyphens: auto !important;
 	-webkit-hyphens: auto !important;
 	        hyphens: auto !important;
+}
+
+a:hover {
+	text-decoration: underline !important;
 }
