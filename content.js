@@ -27,9 +27,11 @@ Hooker.prototype.onKeyDown = function( ev ) {
 	if( document.activeElement instanceof HTMLInputElement ||
 	    document.activeElement instanceof HTMLTextAreaElement )
 	{
+		/*
 		if( ev.code === "Escape" && !ev.shiftKey ) {
 			document.activeElement.blur();
 		}
+		*/
 		return;
 	}
 
