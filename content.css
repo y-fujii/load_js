@@ -23,8 +23,14 @@ textarea, input:not([type]), input[type="text"], input[type="search"] {
 }
 
 @-moz-document domain(mail.google.com) {
-	div.editable {
-		font-family: monospace, monospace;
+	div.editable, .a3s {
+		font-family: monospace, monospace !important;
 		text-align: left;
+	}
+}
+
+@-moz-document domain(google.com), domain(google.co.jp) {
+	div.s {
+		text-align: justify;
 	}
 }

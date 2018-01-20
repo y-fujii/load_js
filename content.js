@@ -7,14 +7,6 @@ function Hooker() {
 	window.addEventListener( "keydown", this.onKeyDown.bind( this ), true );
 }
 
-Hooker.prototype.simplify = function() {
-	let eLink = document.createElement( "link" );
-	eLink.rel  = "stylesheet";
-	eLink.href = chrome.extension.getURL( "simplify.css" );
-	document.head.appendChild( eLink );
-	document.title = location.href;
-}
-
 Hooker.prototype.onKeyDown = function( ev ) {
 	if( ev.defaultPrevented ) {
 		return;
@@ -85,9 +77,6 @@ Hooker.prototype.onKeyDown = function( ev ) {
 				break;
 			case "KeyI":
 				this.insertMode = true;
-				break;
-			case "KeyM":
-				this.simplify();
 				break;
 			default:
 				return;

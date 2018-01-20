@@ -1,18 +1,56 @@
 * {
-	font: inherit !important;
-	background-image: none !important;
-	box-shadow: none !important;
-	text-shadow: none !important;
-	border-style: none !important;
-	border-radius: 0 !important;
-	text-decoration: none !important;
+	position:        static  !important;
+	float:           none    !important;
+	flex:            none    !important;
+	flex-flow:       column  !important;
+	grid-template:   none    !important;
+	grid-row:        auto    !important;
+	grid-column:     auto    !important;
+	align-content:   stretch !important;
+	align-items:     stretch !important;
+	align-self:      auto    !important;
+	list-style:      none    !important;
+	width:           auto    !important;
+	height:          auto    !important;
+	min-width:       0       !important;
+	min-height:      0       !important;
+	max-width:       none    !important;
+	max-height:      none    !important;
+	padding:         0       !important;
+	margin:          0       !important;
+	transform:       none    !important;
+	font:            inherit !important;
+	color:           inherit !important;
+	background:      none    !important;
+	border:          none    !important;
+	box-shadow:      none    !important;
+	text-indent:     0       !important;
+	text-shadow:     none    !important;
+	text-decoration: none    !important;
+	text-align:      justify !important;
+	text-transform:  none    !important;
+	letter-spacing:  normal  !important;
+	overflow:        visible !important;
+	opacity:         1       !important;
+	transition:      none    !important;
+	animation:       none    !important;
+	hyphens:         auto    !important;
+}
+
+*::before, *::after, iframe, object, img, svg, video, canvas {
+	display: none !important;
 }
 
 html {
 	font: 100%/1.5 serif !important;
+	color: #000000 !important;
+	background: #ffffff !important;
+	max-width: 48em !important;
+	margin: 2em auto !important;
+	/*filter: grayscale( 100% );*/
 }
 
-html:lang(ja), *:lang(ja) {
+html:lang(ja) {
 	line-height: 1.75 !important;
 }
 
@@ -22,20 +60,40 @@ sup, sub {
 }
 
 pre, code {
+	white-space: pre-wrap !important;
+	word-break: break-all !important;
 	font-family: monospace, monospace !important;
-}
-
-iframe, object, img, svg, video, canvas {
-	display: none !important;
-}
-
-p, li, dd {
-	text-align: justify !important;
-	   -moz-hyphens: auto !important;
-	-webkit-hyphens: auto !important;
-	        hyphens: auto !important;
 }
 
 a:hover {
 	text-decoration: underline !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 !important;
+	font-weight: bold !important;
+}
+
+/*
+table {
+	border-collapse: collapse !important;
+	margin: 1em 0 !important;
+}
+
+th, td {
+	border: solid 1px #c0c0c0 !important;
+	padding: 0 0.5em !important;
+}
+*/
+
+th, td {
+	padding: 0 0.25em !important;
+}
+
+th:first-child, td:first-child {
+	padding-left: 0 !important;
+}
+
+th:last-child, td:last-child {
+	padding-right: 0 !important;
 }
